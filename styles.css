@@ -1,0 +1,303 @@
+:root {
+    --color-primary-ultralite: #e5edff;
+    --color-primary-lite: #5178cd;
+    --color-primary: #4067bb;
+    --color-black-ultralite: #555;
+    --color-black-lite: #444;
+    --color-black: #333;
+    --color-white: #f5f5f5;
+    --color-grey: #ddd;
+    --color-grey-dark: #ccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-primary-ultralite);
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: .7em 1.5em;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 2px var(--color-black-lite);
+
+    display: flex;
+    align-items: center;
+}
+
+.btn-blue {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-blue:hover {
+    background-color: var(--color-primary-lite);
+}
+
+.btn-black {
+    background-color: var(--color-black-lite);
+    color: var(--color-white);
+}
+
+.btn-black:hover {
+    background-color: var(--color-black-ultralite);
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(.99);
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-grey-dark) var(--color-primary-lite);
+    ;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+/****************************** CUSTOM styles ******************************/   
+.app {
+    position: relative;
+}
+
+.password__generator {
+    padding: 7% 4% 2%;
+    width: 90%;
+}
+
+.hero h1 {
+    color: var(--color-black-lite);
+    line-height: .9;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--color-primary);
+}
+
+.hero p {
+    color: var(--color-black-ultralite);
+    margin-top: 1em;
+    margin-bottom: 5em;
+
+    display:flex;
+    align-items: center;
+}
+
+.hero p img {
+    width: 1.2em;
+    margin-right: .2em;
+}
+
+.hero button {
+    display: flex;
+    align-items: center;
+}
+
+.hero button img {
+    width: 1.5em;
+    margin-right: .5em;
+}
+
+#btn-get-pwds {
+    display: flex;
+    align-items: center;
+}
+
+.separator {
+    border-bottom: 1px solid var(--color-grey-dark);
+    margin: 1em 0;
+}
+
+#passwords__container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#passwords__container .password {
+    width: 48%;
+    margin: 0 1em .5em 0;
+    background-color: var(--color-black-lite);
+    border-radius: 5px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#passwords__container .password input {
+    flex-grow: 1;
+
+    border: none;
+    outline: none;
+    background-color: inherit;
+    color: var(--color-white);
+    padding: 1em;
+    margin-left: .5em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#passwords__container .password img {
+    width: 1.5em;
+    margin-right: .5em;
+}
+
+#passwords__container .password img:hover {
+    cursor: pointer;
+}
+
+/* #notification-msg {
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    position: absolute;
+    top: 0;
+    transform: translateY(-20px);
+    transition: all .5s ease-in;
+} */
+
+footer {
+    color: var(--color-black-ultralite);
+    font-size: .8rem;
+    
+    position: absolute;
+    bottom: 1em;
+}
+
+/****************************** PASSWORD MANAGER styles ******************************/
+#password__manager {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-color: var(--color-primary);
+    color: var(--color-primary-ultralite);
+    width: 80%;
+    height: 100vh;
+    box-shadow: 0 0 10px var(--color-black-lite);
+
+    transform: translateX(95%);
+    transition: all .5s ease-in;
+
+    display: flex;
+}
+
+#password__manager--toggle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0 1em;
+
+    display: flex;
+    align-items: center;
+
+}
+
+#password__manager--toggle:hover {
+    cursor: pointer;
+}
+
+#password__manager--content {
+    padding: 7% 4% 2%;
+    width: 100%;
+}
+
+#password__manager--content h2 {
+    margin-bottom: .5em;
+}
+
+.query__box {
+    display: flex;
+    gap: 1em;
+}
+
+.query__box input {
+    flex-grow: 1;
+
+    border: none;
+    border-radius: 5px;
+    padding-left: 1em;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-primary-ultralite);
+    outline: none;
+}
+
+.action__box {
+    margin: 1em 0;
+
+    display: flex;
+    gap: .5em;
+}
+
+.action__box a {
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: var(--color-primary-ultralite);
+    text-decoration: none;
+    border: 1px solid var(--color-primary-ultralite);
+    padding: .5em 1em;
+    border-radius: 5px;
+}
+
+.action__box a:hover {
+    background-color: var(--color-primary-lite);
+}
+
+
+
+@media screen and (max-width: 540px) {
+    .password__generator {
+        padding: 14% 8% 4%;
+    }
+    #passwords__container .password {
+        width: 200px;
+    }
+    #passwords__container .password input {
+        width: 150px;
+    }
+
+    .hero p img {
+        align-self: flex-start; 
+    }
+    .hero button span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .query__box {
+        flex-direction: column;
+    }
+    .query__box input {
+        height: 3em;
+    }
+    .action__box {
+        width: 180px;
+        flex-direction: column;
+    }
+}

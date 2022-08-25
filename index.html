@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passlox - PasswordManager | by Selviraja</title>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <!-- PASSLOX.COM -->
+        <div class="password__generator container">
+            <div class="hero">
+                <h1>Don't bother<span>remembering every password</span></h1>
+                <p><img src="./images/target-icon.svg" alt="target icon" />Get a strong and secure password everytime</p>
+                <button class="btn btn-blue" id="btn-get-pwds"><img src="./images/thunder-icon.svg" alt="thunder icon" />Generate &nbsp;<span>Passwords</span></button>
+                <div class="separator"></div>
+            </div>
+            <div id="passwords__container">
+                <span class="password">
+                    <input type="text" value="password appears here" /><img src="./images/copy-icon.svg" id="0" onclick="copyPwdText(this.id)" alt="copy icon">
+                </span>
+                <span class="password">
+                    <input type="text" value="password appears here" /><img src="./images/copy-icon.svg" id="1" onclick="copyPwdText(this.id)" alt="copy icon">
+                </span>
+                <span class="password">
+                    <input type="text" value="password appears here" /><img src="./images/copy-icon.svg" id="2" onclick="copyPwdText(this.id)" alt="copy icon">
+                </span>
+                <span class="password">
+                    <input type="text" value="password appears here" /><img src="./images/copy-icon.svg" id="3" onclick="copyPwdText(this.id)" alt="copy icon">
+                </span>
+            </div>
+            <!-- <span id="notification-msg">Password Copied</span> -->
+        </div>      
+        <div id="password__manager">
+            <div id="password__manager--toggle" onclick="togglePasswordManager()">+</div>
+            <div id="password__manager--content">
+                <h2>Password Manager</h2>
+                <div class="query__box">
+                    <input id="password__query--box" type="text" placeholder="Enter website name">
+                    <button class="btn btn-black">GET MY PASSWORD</button>
+                </div>
+                <div class="action__box">
+                    <a href="">Add Password</a>
+                    <a href="">Delete Password</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
